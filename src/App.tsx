@@ -1,9 +1,13 @@
-import { Button } from '@/components/ui/button'
+import HomePage from '@/app/home'
+import { Route, Switch } from 'wouter'
 
 export default function App () {
   return (
-    <div className="w-full min-h-screen flex justify-center items-center">
-      <Button>Shadcn Works</Button>
-    </div>
+    <Switch>
+      <Route path="/" component={HomePage} />
+
+      {/* Default route in a switch */}
+      <Route>404: No such page!</Route>
+    </Switch>
   )
 }
